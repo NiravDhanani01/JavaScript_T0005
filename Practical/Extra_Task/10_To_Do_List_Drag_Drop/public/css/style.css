@@ -58,19 +58,21 @@ header {
     border-radius: 10px;
     padding: 10px;
     position: relative;
-    background-color: rgba(240, 248, 255, 0.603);
+    background-color: rgba(255, 255, 255, 0.603);
 
 }
 .taskList{
     font-size: 15px;
 }
  .card-btn{
+    width: 100%;
     margin: 10px;
-    display: flex;
-    justify-content: center;
-    position: absolute;
+    position: absolute;    
     bottom: 0;
-    right: 10px;
+ }
+ .space{
+    display: flex;
+    justify-content: space-around;
  }
  .card-btn button{
    padding: 5px 10px;
@@ -78,24 +80,24 @@ header {
    border-radius: 10px;
    background-color: #fd0f0fd3;
    border: transparent;
-   color: aliceblue;
+   color: rgb(255, 255, 255);
    cursor: pointer;
  }
 
  .Headtitle_1{
-    background-color: #0fcefd80;
+    background-color: #e6e6e6;
     margin: 20px 0;
     padding: 10px;
     border-radius: 10px;
  }
  .Headtitle_2{
-    background-color: #fd0f0f80;
+    background-color: #e6e6e6;
     margin: 20px 0;
     padding: 10px;
     border-radius: 10px;
  }
  .Headtitle_3{
-    background-color: #0ffd0f80;
+    background-color: #e6e6e6;
     margin: 20px 0;
     padding: 10px;
     border-radius: 10px;
