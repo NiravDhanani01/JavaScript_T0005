@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Image Carousel</h1>
+    </header>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div id="slider" class="fade">
+                <img src="https://buffer.com/library/content/images/size/w1200/2023/09/instagram-image-size.jpg" alt="">
+            </div> 
+            <div id="slider" class="fade">
+                <img src="https://thumbs.dreamstime.com/b/arrosez-l-%C3%A9claboussure-dans-la-forme-de-couronne-et-baisse-en-avec-image-terre-goutte-pluie-bleue-eau-%C3%A9claboussent-140453719.jpg" alt="">
+            </div> 
+            <div id="slider" class="fade">
+                <img src="https://www.hubspot.com/hs-fs/hubfs/image-file-extensions.webp?width=610&height=406&name=image-file-extensions.webp" alt="">
+            </div> 
+             <div id="slider" class="fade">
+                <img src="https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649" alt="">
+            </div>
+
+            <a class="prev" onclick="prevImages()">&#10094;</a>
+            <a class="next" onclick="nextImages()">&#10095;</a>
+        </div>
+    </section>
+
+    <script src="./public/js/index.js"></script>
+</body>
+</html>
