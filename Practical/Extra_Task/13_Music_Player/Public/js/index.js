@@ -1,5 +1,9 @@
 let songList = [
   {
+    name: "Tu Maro Dariyo Mp3 B Praak",
+    url: "./Public/audio/Tu-Maro-Dariyo(PagalWorld).mp3",
+  },
+  {
     name: "Deka tenu paheli paheli bar",
     url: "https://www.pagalworld.com.sb/files/download/type/64/id/71184",
   },
@@ -15,6 +19,7 @@ let songList = [
     name: "Gulabi sadi",
     url: "https://www.pagalworld.com.sb/files/download/type/64/id/70836",
   },
+  
 ];
 let currentSong = 0;
 let isShuffle = false;
@@ -125,8 +130,8 @@ function DisplayPlaylist() {
   songList.map((song, i) => {
     list += `
     <div class="displaylist"> 
-    <li onclick="playdirect(${i})" >${songList[i].name}</li>
-    <span onclick="DeleteItem(${i})">Del</span>
+    <li onclick="playdirect(${i})">${songList[i].name}</li>
+    <span onclick="DeleteItem(${i})"class="fa" >&#xf014;</span>
     </div>
     `;
   });
