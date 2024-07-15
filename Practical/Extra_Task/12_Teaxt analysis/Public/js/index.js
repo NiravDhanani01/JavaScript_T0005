@@ -1,17 +1,19 @@
 function SubmitString() {
-  let str = document.querySelector("#textInput").value
-  // let str = "document hello world chek hello"
+  let str = document.querySelector("#textInput").value.trim();
   let result = document.querySelector("#result")
   let wordFrequency = document.querySelector("#wordFrequency")
   let WorldAveragelength = document.querySelector("#WorldAveragelength")
-  let wordCount = document.querySelector("#wordCount")
   let commonWord = document.querySelector('#commonWord')
 
-
-
+  if (!str) {
+    alert('please Enter A string')
+    return
+  }
+  str.trim()
   result.innerHTML = `<p>Your Sentence :- <b> ${str} </b> </p>`
 
   let wordFreq = str.split(" ").length
+  console.log(str.split(" "));
 
   wordFrequency.innerHTML = `<p>Word Frequency :-  there are <b> ${wordFreq} </b> Words</p>`
 
@@ -45,4 +47,5 @@ function SubmitString() {
     }
   }
   commonWord.innerHTML = `<p>Most Common word :-  <b> ${maxword} </b> </p>`
+  document.querySelector("#textInput").value = ""
 }
