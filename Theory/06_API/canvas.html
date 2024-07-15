@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <center>
+        <div>
+            <canvas id="canvas" style="border: 1px solid black;"></canvas>
+        </div>
+    </center>
+
+</body>
+
+<script>
+    let canvas = document.querySelector("#canvas");
+    canvas.width = "600"
+    canvas.height = "600"
+    let drow = canvas.getContext("2d")
+
+    // rectangle
+    drow.fillStyle = "red"
+    drow.fillRect(10, 10, 100, 100)
+
+    // circle 
+    drow.beginPath();
+    drow.arc(180, 180, 100, 0, Math.PI * 10)
+    drow.fillStyle = "green"
+    drow.fill();
+
+    drow.beginPath()
+    drow.moveTo(500, 20)
+    drow.lineTo(300, 20)
+    drow.lineTo(500, 60)
+    drow.lineTo(300, 80)
+    drow.lineTo(500, 100)
+    drow.lineTo(300, 120)
+    drow.lineTo(500, 140)
+    drow.lineTo(500, 20)
+    drow.fillStyle = "blue"
+    drow.fill()
+    drow.stroke()
+
+    drow.beginPath()
+    drow.arc(300, 400, 150, 0, Math.PI * 2, true)
+    drow.strokeStyle = "red"
+    drow.stroke()
+
+    // eye 
+    drow.beginPath()
+    drow.arc(230, 350, 20, 0, Math.PI * 2, true)
+    drow.fillStyle = "red"
+    drow.fill()
+
+    drow.beginPath()
+    drow.arc(360, 350, 20, 0, Math.PI * 2, true)
+    drow.fillStyle = "red"
+    drow.fill()
+
+    drow.beginPath()
+    drow.arc(300, 430, 80, 0, Math.PI, false)
+    drow.strokeStyle = "red"
+    drow.stroke()
+
+    // drow.beginPath()
+    drow.font = "bold 60px a"
+    drow.strokeText("hello world", 160, 590)
+</script>
+
+</html>
