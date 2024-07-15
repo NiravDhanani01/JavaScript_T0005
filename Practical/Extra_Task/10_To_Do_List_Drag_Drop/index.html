@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do task</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>To do task With Drag-and-Drop</h1>
+    </header>
+    <div class="container">
+        <main>
+            <div class="AddTask">
+                <form action="" onsubmit="FormHandler(event)">
+                    <input type="text" placeholder="enter task details..." id="todoTask">
+                    <button type="submit" id="add-btn">Add</button>
+                </form>
+            </div>
+
+            <div class="ViewList">
+                <div class="Headtitle_1">
+                    <p class="taskHead"> ToDo Item List</p>
+                    <div class="todo-items" id="View_Todo_Item" ondragover="DragOver(event)" ondrop="Drop(event)">
+                        
+                    </div>
+                </div>
+                <div class="Headtitle_2">
+                    <p class="taskHead">Task Pending</p>
+                    <div class="todo-items" id="working" ondragover="DragOver(event)" ondrop="Drop(event)">
+                    </div>
+                </div>
+
+                <div class="Headtitle_3">
+                    <p class="taskHead">Task Complete</p>
+                    <div class="todo-items" id="complete" ondragover="DragOver(event)" ondrop="Drop(event)">
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="./public/js/index.js"></script>
+
+</html>
