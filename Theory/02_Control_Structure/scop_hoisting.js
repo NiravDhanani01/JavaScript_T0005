@@ -22,5 +22,6 @@ console.log(a + " global");
 console.log("================");
 
 // hoisting
-a = 5 
-console.log(a + "Example of hoisting");
+aa = 5 
+console.log(aa + " Example of hoisting");
+var aa;
