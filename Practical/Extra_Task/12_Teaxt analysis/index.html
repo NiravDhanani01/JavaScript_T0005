@@ -1,33 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Analsis Tool</title>
-    <link rel="stylesheet" href="./Public/css/style.css">
-</head>
-<body>
-    <header>
-        <h1>Text Analysis Tool</h1>
-    </header>
-    <div class="container">
-        <div class="center">
-            <textarea class="textInput" id="textInput" placeholder="Enter Text "></textarea>
-            <button class="submitBtn" onclick="SubmitString()">Submit</button>
-        </div>
-        <div class="center">
-            <div>
-                <div id="result"></div>
-                <div id="wordFrequency"></div>
-                <div id="WorldAveragelength"></div>
-                <div id="wordCount"></div>
-                <div id="commonWord"></div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="./Public/js/index.js"></script>
-</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,15 +13,18 @@
     </header>
     <div class="container">
         <div class="center">
-            <textarea class="textInput" id="textInput" placeholder="Enter Text "></textarea>
-            <button class="submitBtn" onclick="SubmitString()">Submit</button>
+           <div>
+            <textarea class="textInput" id="textInput" placeholder="Enter Text " ></textarea>
+            <div class="center">
+                <button class="submitBtn" onclick="SubmitString()">Submit</button>
+            </div>
+           </div>
         </div>
         <div class="center">
             <div>
                 <div id="result"></div>
                 <div id="wordFrequency"></div>
                 <div id="WorldAveragelength"></div>
-                <div id="wordCount"></div>
                 <div id="commonWord"></div>
             </div>
         </div>
