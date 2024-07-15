@@ -20,11 +20,27 @@ h1 {
     padding: 15px 0;
 }
 .player {
+    display: flex;
+    justify-content: center;
+}
+.player-right{
     width: 500px;
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
     background-color: #2d2f31;
     padding: 20px;
+    margin: 0 20px;
+}
+.player-left{
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #2d2f31;
+    padding: 20px;
+    margin: 0 20px;
+}
+.m-left{
+    margin-left: 60px;
 }
 .titlebar {
     text-align: center;
