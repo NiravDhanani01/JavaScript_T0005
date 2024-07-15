@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guss the Number Game</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guss the Number Game</h1>
+    </header>
+    <div class="container">
+        <div class="gameZone">
+            <div class="gusses"></div>
+            <input type="number" id="gussesNum" placeholder="Enter Your Number" />
+            <button class="submit" type="submit" onclick="GussesSubmit()">Submit</button>
+                <div>
+                    <p >Remaining Try : <span id="gusseTry"> </span></p>
+
+                    <p >Your Previouse Gusses  : <span id="prevGussess"></span></p>
+                    <p id="result"></p>
+                    <div id="demo">
+                        <button class="restart" onclick="restart()">ReStart</button>
+                    </div>
+                </div>
+        </div>
+        
+    </div>
+
+    <script src="./public/js/index.js"></script>
+</body>
+
+</html>
