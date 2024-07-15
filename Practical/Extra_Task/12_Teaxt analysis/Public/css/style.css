@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+.textInput{
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+.submitBtn{
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+p{
+    margin-top:10px ;
+    text-align: center;
+}
+#result{
+ display: inline;
+}
