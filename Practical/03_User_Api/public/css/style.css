@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: #1e487c;
+    color: #dae2f4;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header h1{
+    text-align: center;
+}
+
+.user_Table{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+table{
+    border:3px solid transparent;
+}
+th,td{
+    padding: 10px;
+}
+th{
+    background: #8fb0d8de;
+}
+tr:nth-child(even){
+    background-color: #dae2f4;
+}
+tr:nth-child(odd){
+    background-color: #e6edfd63;
+}
+
+.input_table{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#search{
+    padding: 7px 10px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+#btn{
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: #1e487c;
+    color: white;
+    border: none;
+}
