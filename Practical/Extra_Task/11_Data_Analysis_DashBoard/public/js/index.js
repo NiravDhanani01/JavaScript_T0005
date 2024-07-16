@@ -1,174 +1,165 @@
-let employees = [
+
+const stocks = [
   {
-    employeeId: 1,
-    name: "John Doe",
-    attendance: [1, 1, 0, 1, 1, 1, 0, 1, 0.5, 1, 0, 1, 1, 1, 0, 1, 1, 0.5, 1, 1],
-    salaryGrowth: [50000, 52000, 54000, 56000, 58000],
-    salesTarget: [80000, 100000, 70000, 110000, 110000]
+    stockId: 0,
+    name: "ABC Corp",
+    ticker: "ABC",
+    price: [120, 122, 119, 145, 130],
+    volume: [1500, 1800, 1200, 2000, 2200],
+    marketCap: 5000000000
   },
   {
-    employeeId: 2,
-    name: "Jane Smith",
-    attendance: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.5, 1, 1, 1, 1, 1, 0.5, 0.5, 1],
-    salaryGrowth: [55000, 57000, 59000, 61000, 63000],
-    salesTarget: [100000, 120000, 90000, 140000, 200000]
+    stockId: 1,
+    name: "EFG Inc",
+    ticker: "EFG",
+    price: [200, 210, 205, 215, 220],
+    volume: [1300, 1700, 1600, 1800, 2100],
+    marketCap: 10000000000
   },
   {
-    employeeId: 3,
-    name: "Michael Johnson",
-    attendance: [1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0.5, 1, 0, 1, 1, 1, 0],
-    salaryGrowth: [45000, 47000, 49000, 51000, 53000],
-    salesTarget: [70000, 90000, 90000, 100000, 80000]
+    stockId: 2,
+    name: "JKL Ltd",
+    ticker: "JKL",
+    price: [80, 82, 79, 85, 90],
+    volume: [1400, 1900, 1500, 2100, 2300],
+    marketCap: 3000000000
   },
   {
-    employeeId: 4,
-    name: "Emily Davis",
-    attendance: [1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0.5, 1, 1, 1, 1, 0.5, 0.5],
-    salaryGrowth: [48000, 50000, 52000, 54000, 56000],
-    salesTarget: [75000, 80000, 70000, 100000, 120000]
+    stockId: 3,
+    name: "PQR Group",
+    ticker: "PQR",
+    price: [60, 62, 61, 64, 67],
+    volume: [1600, 2000, 1400, 2200, 2500],
+    marketCap: 2000000000
   },
   {
-    employeeId: 5,
-    name: "William Brown",
-    attendance: [1, 1, 0, 1, 1, 0, 1, 1, 0.5, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0.5],
-    salaryGrowth: [46000, 48000, 50000, 52000, 54000],
-    salesTarget: [85000, 60000, 70000, 110000, 125000]
-  },
+    stockId: 4,
+    name: "XYZ Co",
+    ticker: "XYZ",
+    price: [150, 155, 153, 158, 162],
+    volume: [1700, 1800, 1600, 2000, 2200],
+    marketCap: 4000000000
+  }
 ];
 
-let name = document.querySelector("#EmpName");
-let presentDay = document.querySelector("#TotalPresentDays");
-let Leave = document.querySelector("#TotalLeaves");
-let presentAverage = document.querySelector("#average");
-let SalaryGrowth = document.querySelector("#SalaryGrowt");
-let searchByname = document.querySelector("#searchEmployeName");
-let MinSalling = document.querySelector("#MinSalling")
-let MaxSalling = document.querySelector("#MaxSalling")
+const companyName = document.querySelector("#CompanyName");
+const ticker = document.querySelector("#Ticker");
+const currentPrice = document.querySelector("#CurrentPrice");
+const highestPrice = document.querySelector("#HighestPrice");
+const lowestPrice = document.querySelector("#LowestPrice");
+const marketCap = document.querySelector("#MarketCap");
+const volume = document.querySelector("#Volume");
+const companyButtons = document.querySelector("#companyButtons");
 
-let barChart = null;
 let lineChart = null;
+let pieChart = null;
 
-function statistics(employeeId) {
-  let empName = employees[employeeId].name;
-  name.innerText = empName;
-
-  let totalDay = employees[employeeId].attendance.length;
-
-  let present = 0;
-  for (let i = 0; i < employees[employeeId].attendance.length; i++) {
-    present += employees[employeeId].attendance[i];
-  }
-  presentDay.innerText = present;
-
-  let leav = totalDay - present;
-  Leave.innerText = leav;
-
-  let average = ((present / totalDay) * 100).toFixed(2);
-  presentAverage.innerText = `${average} %`;
-
-  let startSalary = employees[employeeId].salaryGrowth[0];
-  let lastSalary =
-    employees[employeeId].salaryGrowth[
-    employees[employeeId].salaryGrowth.length - 1
-    ];
-  let timePeriod = employees[employeeId].salaryGrowth.length;
-  let growth = (
-    ((lastSalary / startSalary) ** (1 / timePeriod) - 1) *
-    100
-  ).toFixed(2);
-  SalaryGrowth.innerText = `${growth} %`;
-
-  let min = employees[employeeId].salesTarget[0]
-  for(let i =0;i<employees[employeeId].salesTarget.length;i++){
-    if(min > employees[employeeId].salesTarget[i]  ){
-      min = employees[employeeId].salesTarget[i]
+function displayStatistics(stockId) {
+  const stock = stocks[stockId];
+  companyName.innerText = stock.name;
+  ticker.innerText = stock.ticker;
+  currentPrice.innerText = `${stock.price[stock.price.length - 1]}`;
+  let max = stock.price[0]
+  for(let i = 0;i < stock.price.length;i++){
+    if(max < stock.price[i]){
+      max = stock.price[i]
     }
   }
-  MinSalling.innerText = min;
-  
-  let max = employees[employeeId].salesTarget[0]
-  for(let i =0;i<employees[employeeId].salesTarget.length;i++){
-    if(max < employees[employeeId].salesTarget[i]  ){
-      max = employees[employeeId].salesTarget[i]
+  highestPrice.innerText = `${max}`;
+  let min = stock.price[0]
+  for(let i = 0;i < stock.price.length;i++){
+    if(min > stock.price[i]){
+      min = stock.price[i]
     }
   }
-  MaxSalling.innerText = max;
+  lowestPrice.innerText = `${min}`;
+  marketCap.innerText = `${stock.marketCap}`;
+  volume.innerText = stock.volume[stock.volume.length - 1];
 }
 
-function makeChart(employeeId) {
-
-  if (barChart) {
-    barChart.destroy()
-  }
+function createLineChart(stockId) {
   if (lineChart) {
-    lineChart.destroy()
+    lineChart.destroy();
   }
 
-  let displayBarChart = document.querySelector("#barChart").getContext("2d");
-  barChart = new Chart(displayBarChart, {
-    type: "bar",
-    data: {
-      labels: employees[employeeId].attendance.map((_, i) => `Day ${i + 1}`),
-      datasets: [
-        {
-          label: "Employees Attendance Sheet",
-          data: employees[employeeId].attendance,
-        },
-      ],
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-        },
-      },
-    },
-  });
+  const PriceChart = document.querySelector("#priceChart").getContext("2d");
+  const stock = stocks[stockId];
 
-  let displayLineChart = document.querySelector("#salaryGrowthChart").getContext("2d");
-
-  lineChart = new Chart(displayLineChart, {
+  lineChart = new Chart(PriceChart, {
     type: "line",
     data: {
-      labels: employees[employeeId].salaryGrowth.map(
-        (yers, i) => `Year ${i + 1}`
-      ),
+      labels: stock.price.map((_, i) => `Day ${i + 1}`),
       datasets: [
         {
-          label: "Employess Yearly Salary Growth",
-          data: employees[employeeId].salaryGrowth,
+          label: "Stock Price",
+          data: stock.price,
+          borderColor: "#3498db",
+          backgroundColor: "rgba(52, 152, 219, 0.2)",
+          fill: true
         },
         {
-          label: "Yearly sales Target Achive",
-          data: employees[employeeId].salesTarget,
-        },
-      ],
+          label: "Volume",
+          data: stock.volume,
+          borderColor: "#2ecc71",
+          backgroundColor: "rgba(46, 204, 113, 0.2)",
+          fill: true,
+          yAxisID: 'y2'
+        }
+      ]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: false,
+          beginAtZero: true
         },
-      },
-    },
+        y2: {
+          beginAtZero: true,
+          position: 'right'
+        }
+      }
+    }
   });
 }
 
-function FilterEmployee() {
-  let empData = "";
-  employees.map((name, i) => {
-    empData += `
-            <option value=${i}>${name.name}</option>
-        `;
+function createPieChart() {
+  if (pieChart) {
+    pieChart.destroy();
+  }
+
+  const PortFoliChart = document.querySelector("#portfolioChart").getContext("2d");
+  const portfolio = {
+    labels: stocks.map(stock => stock.name),
+    data: stocks.map(stock => stock.marketCap)
+  };
+
+  pieChart = new Chart(PortFoliChart, {
+    type: "pie",
+    data: {
+      labels: portfolio.labels,
+      datasets: [{
+        label: 'Portfolio Distribution',
+        data: portfolio.data,
+      }]
+    }
   });
-  searchByname.innerHTML = empData;
-  searchByname.addEventListener('change', function () {
-    let setemployeeId = this.value;
-    statistics(setemployeeId)
-    makeChart(setemployeeId)
-  })
 }
-FilterEmployee();
-statistics(0);
-makeChart(0);
+
+function populateCompanyButtons() {
+  stocks.forEach((stock, index) => {
+    const button = document.createElement('button');
+    button.textContent = stock.name;
+    button.setAttribute("class","btn")
+    button.addEventListener('click', () => {
+      displayStatistics(index);
+      createLineChart(index);
+    });
+    companyButtons.appendChild(button);
+  });
+}
+
+populateCompanyButtons();
+displayStatistics(0);
+createLineChart(0);
+createPieChart();
+
 
