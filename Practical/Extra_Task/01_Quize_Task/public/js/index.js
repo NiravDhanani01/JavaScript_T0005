@@ -88,7 +88,6 @@ function ansDeselected() {
 
 function gotoNext() {
     let ans = ansSelected()
-    console.log(ans);
     if (ans === undefined) {
         alert("Please select an answer")
         return false
@@ -123,7 +122,6 @@ function gotoPrevious() {
 function displayResult() {
     const result = document.getElementById("result")
     let sum = (score / quize.length) * 100
-    console.log(sum);
     if (sum >= 50) {
         result.innerHTML = `<p class="score"> Congratulation </p> 
               <p>  You Score ${score} out of  ${quize.length} </p> `
