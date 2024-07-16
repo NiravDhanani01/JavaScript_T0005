@@ -1,31 +1,37 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: black;
     color: aliceblue;
 }
-header{
+
+header {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
-.container{
+
+.container {
     width: 500px;
     display: flex;
     justify-content: center;
     margin: 0 auto;
 }
-.gusses{
+
+.gusses {
     width: 100%;
 }
-input{
+
+input {
     margin: 10px;
     padding: 7px 10px;
 }
-.submit{
+
+.submit {
     margin: 10px;
     padding: 7px 10px;
     border-radius: 10px;
@@ -35,11 +41,12 @@ input{
     cursor: pointer;
 }
 
-p{
+p {
     text-align: center;
     line-height: 2;
 }
-.restart{
+
+.restart {
     margin: 10px;
     padding: 7px 10px;
     border-radius: 10px;
@@ -49,7 +56,8 @@ p{
     cursor: pointer;
     display: none;
 }
-#demo{
+
+#demo {
     display: flex;
     justify-content: center;
 }

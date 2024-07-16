@@ -1,5 +1,5 @@
 
-let RandomNum = Math.ceil(Math.random() * 100 )
+let RandomNum = Math.ceil(Math.random() * 100)
 let Guess = []
 let remain = 10
 let count = 0
@@ -20,7 +20,7 @@ function GussesSubmit() {
         document.getElementById("gussesNum").value = ""
         return false
     }
-    
+
     Guess.push(num)
     prevGussess.innerHTML = Guess
     count++
