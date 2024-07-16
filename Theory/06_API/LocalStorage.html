@@ -14,6 +14,7 @@
         <p>Click to set Data</p>
         <p> Name : Happy</p>
         <p> email : Happy@gmail.com</p>
+        <p id="done"></p>
         <button onclick="setItem()">SetItem</button>
 
         <hr>
@@ -33,6 +34,10 @@
             email: "Happy@gmail.com"
         }]
         localStorage.setItem("data", JSON.stringify(obj))
+        document.getElementById("done").innerHTML = "Data Set"
+        setInterval(()=>{
+            document.getElementById("done").style.display = "none"
+        },1000)
     }
 
     function getItem() {
@@ -43,7 +48,6 @@
             let tbl = ""
             res.map((item) => {
             tbl += `
-
             <tr> 
                <td> ${item.name} </td> 
                <td> ${item.email} </td> 
