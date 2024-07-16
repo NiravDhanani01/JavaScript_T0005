@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form_Validation</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -18,25 +18,25 @@
                         <h1 class="form-title">Form Validation</h1>
                         <div class="form-control">
                             <label for="name">Name : </label>
-                            <input type="text" name="name" id="name" onchange="nameChecker()"
+                            <input type="text" name="name" id="name" oninput="nameChecker()"
                                 placeholder="Enter your name">
                             <p id="name-error" class="error"></p>
                         </div>
                         <div class="form-control">
                             <label for="email">Email :</label>
-                            <input type="email" name="email" id="email" onchange="emailChecker()"
+                            <input type="email" name="email" id="email" oninput="emailChecker()"
                                 placeholder="abc@gmail.com">
                             <p id="email-error" class="error"></p>
                         </div>
                         <div class="form-control">
                             <label for="password">Password :</label>
-                            <input type="Password" name="password" id="password" onchange="passwordChecker()"
+                            <input type="Password" name="password" id="password" oninput="passwordChecker()"
                                 placeholder="1234">
                             <p id="password-error" class="error"></p>
                         </div>
                         <div class="form-control">
                             <label for="password">Confirm Password :</label>
-                            <input type="Password" name="Cpassword" id="Cpassword" onchange="ConfirmPasswordChecker()"
+                            <input type="Password" name="Cpassword" id="Cpassword" oninput="ConfirmPasswordChecker()"
                                 placeholder="1234">
                             <p id="Cpassword-error" class="error"></p>
                         </div>
@@ -49,5 +49,5 @@
         </div>
     </div>
 </body>
-<script src="./script.js"></script>
+<script src="./js/script.js"></script>
 </html>

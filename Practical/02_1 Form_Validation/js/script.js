@@ -3,8 +3,6 @@ let isemail = false
 let ispassword = false
 let isCpassword = false
 
-
-
 function FormHandler(event) {
     event.preventDefault();
     let name = document.getElementById("name").value;
@@ -24,7 +22,6 @@ function FormHandler(event) {
             password: password,
         }
         data.push(obj)
-        console.log(data);
         alert("Registartion done..........")
         document.querySelector('#name').value = ""
         document.querySelector('#email').value = ""
@@ -62,16 +59,15 @@ function nameChecker() {
 function emailChecker() {
     let email = document.querySelector('#email').value
     let email_error = document.querySelector("#email-error")
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    let dot = "."
+    let emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (email == "") {
         email_error.innerHTML = "please enter valid email"
         isemail = false
      }   
-     if(!emailRegex.test(email)){
+     else if(!emailRegex.test(email)){
         email_error.innerHTML = "please enter valid email"
         isemail = false
-     }
+     } 
     else {
         email_error.innerHTML = ""
         isemail = true
