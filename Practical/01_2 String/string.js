@@ -3,6 +3,8 @@ let str = "Hello Good Morning 123"
 // char Count  
 let charCount = str.trim().length
 console.log("Here Total character is =>", charCount);
+console.log("======");
+
 
 // only words not number 
 let regex = /[^a-zA-Z]/gi
@@ -15,7 +17,6 @@ let words = str.split(" ")
 console.log("Words count");
 console.log(words.length);
 console.log("======");
-
 
 // frequency of obj 
 let frequency = {}
