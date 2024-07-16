@@ -1,6 +1,10 @@
 let imageData = []
 function AddImage() {
     let image = document.querySelector("#AddPhoto").value
+    if(!image){
+        alert("Enter Image Url in input field")
+        return
+    }
     let id = Math.floor(Math.random() * 100)
     let obj = {
         id,
@@ -18,11 +22,10 @@ function AddImage() {
     document.querySelector("#AddPhoto").value = ""
     ViewImage()
 }
-
 function ViewImage() {
     let alldata = JSON.parse(localStorage.getItem('img')) || []
     let show = ""
-    alldata.map((val, i) => {
+    alldata.map((val) => {
         show += `
         <div class="image-container" onclick="Modelbox(${(val.id)})" >
                 <img src=${val.image} alt="1" class="image"  >
@@ -36,7 +39,6 @@ function ViewImage() {
 ViewImage()
 
 function DeletePhoto(id) {
-
     let alldata = JSON.parse(localStorage.getItem('img')) || []
     let del = alldata.filter(item => item.id !== id)
     localStorage.setItem("img", JSON.stringify(del))
@@ -46,10 +48,9 @@ function DeletePhoto(id) {
 function Modelbox(id) {
     let ModelBox = document.querySelector(".ModelBox")
     let ModelBoxcontainer = document.querySelector(".ModelBox-container")
-    let ModelBoxclose = document.querySelector(".ModelBox-close")
 
     let alldata = JSON.parse(localStorage.getItem('img')) || []
-    let single = alldata.map((image) => {
+   alldata.map((image) => {
         if (image.id === id) {
             ModelBoxcontainer.innerHTML = ` 
              <span class="model-Close" onclick="closebtn()">&#10006;</span>
@@ -60,6 +61,5 @@ function Modelbox(id) {
 }
 
 function closebtn(){
-    console.log("done");
     document.querySelector(".ModelBox").style.display = "none"
 }
