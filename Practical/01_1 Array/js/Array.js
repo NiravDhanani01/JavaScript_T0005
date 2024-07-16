@@ -22,7 +22,7 @@ let recipes = [
     },
 ]
 
-// here is add data
+// //here is add data
 function Add(data) {
     try {
         recipes.push(data)
@@ -34,7 +34,7 @@ function Add(data) {
     }
 }
 
-// delete 
+// // delete 
 function del(id) {
     try {
         let alldata = JSON.parse(localStorage.getItem("recipes"))
@@ -49,7 +49,7 @@ function del(id) {
     }
 }
 
-//edit or update 
+// //edit or update 
 function edit(id, category,name,ingredients,description) {
     try {
        let alldata = JSON.parse(localStorage.getItem("recipes"))
@@ -104,29 +104,29 @@ function viewData() {
     }
 }
 viewData()
-//Add 
-let obj = {
-    id: 4,
-    category: "Breakfast",
-    name: "salad",
-    ingredients: "avacado,kiwi,salt",
-    description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that"
-}
-console.log("Add New Data");
-console.log(Add(obj));
-console.log("=============");
+// // Add 
+// let obj = {
+//     id: 4,
+//     category: "Breakfast",
+//     name: "salad",
+//     ingredients: "avacado,kiwi,salt",
+//     description: "t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that"
+// }
+// console.log("Add New Data");
+// console.log(Add(obj));
+// console.log("=============");
 
 // //edit
 // console.log("Edit data");
-// console.log(edit(1,"Dinner","Special Soup ","Boil water"," is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that"));
+// console.log(edit(1,"Dinner","Special Soup ","Boil water","  will be distracted  content of a page when looking at its layout. The point of using Lorem Ipsum is that"));
 // console.log("=========");
 
-// // filter data
+// //filter data
 // console.log("filer data");
 // console.log(filterByIngredient("salt"));
 // console.log("=============");
 
-// //delete
+// // delete
 // console.log("Delete Data");
 // console.log(del(2));
 // console.log("=============");
