@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Get Your Location</h1>
+    <button> Click Me </button>
+    <p id="location"></p>
+    <p id="watchposition"></p>
+    <div id="map" style="width: 100%;height: 500px; border: 1px solid black;"></div>
+</body>
+<script>
+    let btn = document.querySelector("button")
+    btn.addEventListener("click", function () {
+        let watch = navigator.geolocation.getCurrentPosition(successWatch, failwatch)
+    })
+
+    let locat = document.getElementById("location")
+    function successWatch(position) {
+        locat.innerHTML = `Longitude` + position.coords.longitude + `</br> Latitude ` + position.coords.latitude
+        let mapid = position.coords.latitude + "," + position.coords.longitude
+
+        let map = document.querySelector("#map")
+        window.location.href = "http://maps.google.com/?q=" + mapid
+    }
+    function failwatch() {
+        locat.innerHTML = "Somthing Wrong !!!! , Location not avialable"
+    }
+</script>
+
+</html>

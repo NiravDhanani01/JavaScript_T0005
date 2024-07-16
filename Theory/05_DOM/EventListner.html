@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+        button{
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Events</h1>
+        <div id="box" onmouseover="myFunc()" onmouseleave="leaveFunc()"></div>
+
+        <div>
+            <h1 onmousedown="mouseDown()" class="down" onmouseleave="leave()">Click Me.</h1>
+        </div>
+        <div>
+            <input type="text" placeholder="key Down" id="keyDown" onkeypress="keyDown()">
+            <p class="keyDown"></p>
+        </div>
+        <div>
+            <p class="eventlisten">Hello is done with addEventListner -- clickme</p>
+        </div>
+        <div>
+            <button ondblclick="dblClick()">Double Click me</button>
+        </div>
+        <div>
+            <button id="btn2">Clickme</button>
+        </div>
+
+    </center>
+</body>
+<script>
+    function myFunc() {
+        document.querySelector("#box").style.backgroundColor = "red"
+    }
+    function leaveFunc() {
+        document.querySelector("#box").style.backgroundColor = "aqua"
+    }
+
+    function mouseDown() {
+        document.querySelector(".down").style.fontSize = "50px"
+    }
+    function leave() {
+        document.querySelector(".down").style.fontSize = "30px"
+    }
+
+    function keyDown() {
+        document.getElementsByClassName("keyDown")[0].innerHTML = "key press event triger"
+    }
+
+    document.querySelector('.eventlisten').addEventListener("click", function () {
+        this.innerHTML = "click event done"
+    })
+
+    function dblClick() {
+        let bgColor = Math.floor(Math.random() * 10000000).toString(16)
+        document.querySelector("body").style.backgroundColor = "#" + bgColor
+    }
+
+    let btn1 = document.querySelector("#btn2");
+    let val = "light"
+    btn1.addEventListener("click", () => {
+        if (val == "light") {
+            document.querySelector("body").style.backgroundColor = "black"
+            document.querySelector("body").style.color = "white"
+            val = "dark"
+        } else {
+            document.querySelector("body").style.backgroundColor = "white"
+            document.querySelector("body").style.color = "black"
+            val = "light"
+            console.log("dark");
+        }
+    })
+
+
+
+
+</script>
+
+</html>
