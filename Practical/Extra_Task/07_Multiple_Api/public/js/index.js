@@ -14,7 +14,7 @@ function FetchApi() {
         Promise.all(allurl)
             .then(data => {
                 demo.innerHTML = `
-                    <div class="flex">
+                    <div class="flex bgcolor">
                         <div class="list">
                             <h1>Quotes</h1>
                             <ul>
