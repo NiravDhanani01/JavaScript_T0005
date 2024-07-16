@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods</title>
+</head>
+
+<body>
+    <h1>List of Thing</h1>
+
+    <ul class="list1">
+        <li>One </li>
+        <li>Two</li>
+    </ul>
+    <ul class="list2">
+        <li>Three </li>
+        <li>Four</li>
+    </ul>
+    <ul id="list3"></ul>
+    <p id="test"></p>
+
+    <ul class="list4">
+        <li class="listItem">milk</li>
+        <li class="listItem">Powder</li>
+        <li class="listItem">Powder</li>
+        <li class="listItem">Powder</li>
+    </ul>
+
+    <button onclick="create()">Create </button>
+    <button onclick="move()">Move</button>
+    <button onclick="change()">Chaneg li value</button>
+
+
+    <p>Diffrence textContent or inner Html</p>
+    <p class="demo"></p>
+    <p class="demo2"></p>
+    <p class="demo3">Remove this item</p>
+    <button onclick="remove()">remove</button>
+</body>
+<script>
+
+    function create() {
+        let li = document.createElement('li')
+        let textnode = document.createTextNode("water")
+        textnode.innerHTML = ("redy")
+        li.append(textnode)
+        document.querySelector("#list3").append(li)
+    }
+    //
+    function move() {
+        let li3 = document.querySelector("#list3").firstElementChild
+        document.querySelector(".list2").appendChild(li3)
+    }
+
+    function change() {
+        let list = document.getElementsByClassName("list4")[0];
+        list.getElementsByClassName("listItem")[2].innerHTML = "Tea"
+    }
+
+    document.getElementsByClassName("demo")[0].innerHTML = "<h2> Test sentance </h2>"
+    document.getElementsByClassName("demo2")[0].textContent = "<h2> Test sentance </h2>"
+
+    function remove() {
+        document.querySelector(".demo3").remove()
+    }
+</script>
+
+</html>
