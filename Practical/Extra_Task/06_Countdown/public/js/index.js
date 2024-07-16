@@ -15,6 +15,3 @@ function CountDown() {
     }
   }, 1000)
 }
-
-let data = Date.getTime()
-console.log(data);
