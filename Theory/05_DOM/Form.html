@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form And input Handling</title>
+    <style>
+        .form-container{
+            width: 400px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+
+        }
+        .form-control{
+            padding: 0 10px;
+        }
+        .form-control input{
+            width: 100%;
+            margin: 10px 0;
+            padding: 5px;
+        }    
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Form Heandler</h1>
+        <hr>
+        <form action="" onsubmit="formHandler(event)" class="form-container">
+            <div class="form-control">
+                <input type="text" onkeydown="downfunc()" placeholder="abc" id="name" class="form"
+                    />
+                <span id="error1"></span>
+            </div>
+            <div class="form-control">
+                <input type="email" onkeydown="downfunc()" placeholder="email@gmail.com" id="email" class="form"
+                    />
+                <span id="error"></span>
+            </div>
+            <input type="submit" value="submit">
+        </form>
+
+        <h2>input values</h2>
+        <table border="1px" cellpadding="5px">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </center>
+</body>
+<script>
+    function formHandler(event) {
+        event.preventDefault()
+
+        let name = document.querySelector('#name').value
+        let email = document.querySelector('#email').value
+
+      let tbody = document.querySelector('#tbody')
+      tbody.innerHTML = `<tr>
+                          <td> ${name} </td>
+                          <td> ${email} </td>
+                         </tr>`
+
+        if (name == "" || email == "") {
+            let err = document.querySelector('#error1')
+            err.innerHTML = "Enter valid input";
+            err.style.color = "red"
+        } 
+        if (email == "") {
+            let err = document.querySelector('#error')
+            err.innerHTML = "Enter valid input";
+            err.style.color = "red"
+        } 
+    }
+    function downfunc() {
+        let a = document.querySelector('.form')
+
+        let name = document.querySelector('#name').value
+        let email = document.querySelector('#email').value
+
+        if (name) {
+            let err = document.querySelector('#error1')
+            err.innerHTML = "";
+        }
+        if (email) {
+            let err = document.querySelector('#error')
+            err.innerHTML = "";
+        }
+
+    }
+</script>
+
+</html>
