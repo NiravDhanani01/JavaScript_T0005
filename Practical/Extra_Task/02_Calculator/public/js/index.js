@@ -1,8 +1,7 @@
 let result = document.getElementById("result")
-
 function addvalue() {
-    let num1 = Number(document.getElementById("num_1").value)
-    let num2 = Number(document.getElementById("num_2").value)
+    var num1 = Number(document.getElementById("num_1").value)
+    var num2 = Number(document.getElementById("num_2").value)
     result.innerHTML = `Addition of ${num1} + ${num2} = ${num1 + num2}`
 }
 function minusValue() {
