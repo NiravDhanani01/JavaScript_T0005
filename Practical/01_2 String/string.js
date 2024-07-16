@@ -5,6 +5,7 @@ let charCount = str.trim().length
 console.log("Here Total character is =>", charCount);
 console.log("======");
 
+
 // only words not number 
 let regex = /[^a-zA-Z]/gi
 console.log("only character count not a number");
