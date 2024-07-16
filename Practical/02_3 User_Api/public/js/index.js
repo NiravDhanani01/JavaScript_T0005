@@ -32,7 +32,6 @@ let response = UserData()
 function FilterData(event) {
     event.preventDefault()
     let search = document.getElementById("search").value
-    let p = document.createElement("p")
     response.then(data => {
         let result = data.filter((item) => item.name.toLowerCase().includes(search))
         let tbl = ""
@@ -48,9 +47,15 @@ function FilterData(event) {
                 </tr>
                 `
         })
-        result.length < 1 ? 
-        document.getElementById("tbody").innerHTML = "No Data Found" : 
-        document.getElementById("tbody").innerHTML = tbl
+        if( result.length < 1 ){
+            document.getElementById("table").style.display = "none", 
+            document.querySelector(".result").innerHTML = `<h2> No Data Found </h2>`,
+            setInterval(()=>{
+                location.reload()
+            },1000)
+        } else{
+            document.getElementById("tbody").innerHTML = tbl
+        }
     })
 }
 

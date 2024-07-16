@@ -12,13 +12,13 @@
     </div>
 <div class="input_table">
     <form onsubmit="FilterData(event)">
-        <input type="text" name="search" id="search" placeholder="Search...">
+        <input type="text" name="search" id="search"  placeholder="Search...">
         <button type="submit" id="btn">Search</button>
     </form>
 </div>
 
     <div class="user_Table">
-        <table border="1" cellpadding="10px">
+        <table border="1" cellpadding="10px" id="table">
            <thead>
             <tr>
                 <th>No</th>
@@ -32,6 +32,7 @@
            <tbody id="tbody"> </tbody>
         </table>
     </div>
+    <div class="result"></div>
 </body>
 <script src="./public/js/index.js"></script>
 </html>
