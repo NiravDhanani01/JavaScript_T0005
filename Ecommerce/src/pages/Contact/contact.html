@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="./src/public/img/leaves.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="stylesheet" href="../../public/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="banner">
+        <header  class="wow animate__fadeIn" data-wow-duration="2s">
+            <div class="container">
+                <nav class="navBar d-flex justify-between">
+                    <div class="logoImg">
+                        <img src="../../public/img/logo.png" alt="Logo">
+                    </div>
+                    <div class="navBarItems largeNav">
+                        <ul type="none" class="d-flex justify-between">
+                            <li><a href="../../../index.html">Home</a></li>
+                            <li><a href="../Product/product.html">Product</a></li>
+                            <li onclick="GotoCart()" class="cartnotification">Cart <i
+                                    class="fa-solid fa-cart-shopping"></i>
+                                <div class="bedgis" id="updateQty"></div>
+                            </li>
+                            <li><a href="#">Contact</a> </li>
+                            <li class="dropDown"><i class="fa-regular fa-user"></i><span id="userName"> User Name</span>
+                                <div class="dropDown-Items">
+                                    <ul type="none">
+                                        <li id="loginUser"><a href="./src/pages/login/login.html"><i
+                                                    class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                                        <li onclick="GotoUserProfile()" id="ResetPassword"><i
+                                                class="fa-solid fa-gear"></i> User Profile</li>
+                                        <li onclick="LogoutUser()" id="logout"><i
+                                                class="fa-solid fa-right-from-bracket"></i> Logout</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-navBar">
+                        <button class="small-menu-toggle" onclick="toggleNavBar()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="small-navBarItems" id="smallMenu">
+                    <ul type="none" class="d-flex flex-column">
+                        <li><a href="../../../index.html">Home</a></li>
+                        <li><a href="../Product/product.html">Product</a></li>
+                        <li onclick="GotoCart()" class="cartnotification">Cart <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="bedgis" id="smallupdateQty"></div>
+                        </li>
+                        <li><a href="../Contact/contact.html">Contact</a> </li>
+                        <li class="dropDown"><i class="fa-regular fa-user"></i><span id="smalluserName"> User
+                                Name</span>
+                            <div class="dropDown-Items">
+                                <ul type="none">
+                                    <li id="smallloginUser"><a href="../login/login.html"><i
+                                                class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                                    <li onclick="GotoUserProfile()" id="ResetPassword"><i class="fa-solid fa-gear"></i>
+                                        User Profile</li>
+                                    <li onclick="LogoutUser()" id="smalllogout"><i
+                                            class="fa-solid fa-right-from-bracket"></i> Logout</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section class="contactsection">
+        <div class="container">
+            <div class="form-head">
+                <h2>Contact With Us</h2>
+            </div>
+            <div class="contactinfo d-flex flex-wrap">
+                <div class="contact-form wow animate__fadeInLeft" data-wow-duration="1s">
+                    <div class="form-title">
+                        <h2>We would love to hear from you.</h2>
+                        <p>If you’ve got great products your making or looking to work with us then drop us a line.</p>
+                    </div>
+                    <div class="formstructure">
+                        <form action="" onsubmit="ContactDetails(event)" class="d-flex flex-wrap">
+                            <div class="info_form sp1">
+                                <label for="name">Name</label>
+                                <input type="text" placeholder="Enter Name" id="InfoName">
+                            </div>
+                            <div class="info_form sp1">
+                                <label for="name">Phone</label>
+                                <input type="number" placeholder="+91 " id="Infophone">
+                            </div>
+                            <div class="info_form ">
+                                <label for="name">Email</label>
+                                <input type="email" placeholder="Abc01@gmail.com " id="InfoEmail">
+                            </div>
+                            <div class="info_form ">
+                                <label for="name">Your Message </label>
+                                <textarea type="text" rows="4" placeholder="Enter Your Message  " id="InfoMessage"></textarea>
+                            </div>
+                            <div style="margin: 0 auto;">
+                                <button class="btn message" type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="contact-details wow animate__fadeInRight" data-wow-duration="1s">
+                    <div class="store">
+                        <h2 class="storeHead">Our Store</h2>
+                        <div class="storeDetail">
+                            <p>8212 E. Glen Creek Street Orchard Park, NY 14127, United States of
+                                America</p>
+                        </div>
+                        <div class="storeDetail">
+                            <p>Phone: +123 456 7890</p>
+                            <p>Email: Hello@etrade.com</p>
+                        </div>
+                    </div>
+                    <div class="store">
+                        <h2 class="storeHead"> Opening Hours:</h2>
+                        <div class="storeDetail">
+                            <p>Monday to Saturday: 9am - 10pm</p>
+                            <p> Sundays: 10am - 6pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nevigationSection">
+        <div class="container">
+           <div class="navigationMap wow animate__flipInX" data-wow-duration="1s">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9387450197037!2d72.86865777600228!3d21.23427748068656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04fbe056894ef%3A0x7bfc941e108f23a5!2sIT%20Park!5e0!3m2!1sen!2sin!4v1721649508098!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+        </div>
+    </section>
+    <section class="fotter-section">
+        <div class="container">
+            <footer>
+                <div class="footer-details d-flex flex-wrap justify-between">
+                    <div class="footer-one">
+                        <div class="footlogo">
+                            <img src="../../public/img/logo.png" width="200px" alt="">
+                            <p class="endText">
+                                We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a
+                                perfect place for a couple.
+                            </p>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-house"></i></span>
+                                <p class="companyAddress"> 685 Market Street,
+                                    Las Vegas, LA 95820,
+                                    United States.</p>
+                            </div>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-phone"></i></span>
+                                <p class="companyAddress"> (+01) 850-315-5862</p>
+                            </div>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-envelope"></i></span>
+                                <p class="companyAddress"> example@domain.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-two d-flex justify-center">
+                        <div>
+                            <h3>Pages</h3>
+                            <ul type="none">
+                                <li class="page-link"><a href="../../../index.html">Home</a></li>
+                                <li class="page-link"><a href="../Product/product.html">Product</a></li>
+                                <li class="page-link" onclick="GotoCart()">Cart</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-three">
+                        <h3>Download App</h3>
+                        <p>Save Upto 10% With App & New User only</p>
+                        <div class="d-flex justify-center Qr">
+                            <img src="../../public/img/qr.png" alt="">
+                            <div class="playStore">
+                                <div><img src="../../public/img/appstore.svg" alt=""></div>
+                                <div><img src="../../public/img/playstore.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <h4 class="connected">Stay connected </h4>
+                        <div class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="endnotes">
+                    <h4 class="text-center">copyRights &#169;</h4>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+<script src="./contact.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>

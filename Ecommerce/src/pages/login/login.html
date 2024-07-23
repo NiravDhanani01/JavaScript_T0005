@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="icon" href="../public/img/fevicon.png">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
+
+<body>
+    <section class="loginuser">
+        <div class="container">
+            <div class="row">
+                <div class="box1"></div>
+                <div class="box">
+                    <h1 class="login-head">Login To Ecommerce</h1>
+                    <p class="login-title">Enter details below</p>
+                    <div class="login-form">
+                        <form action="" onsubmit="LoginUser(event)">
+                            <div class="form-control">
+                                <label for="name">Enter Email Address : </label>
+                                <input type="email" name="email" id="email" placeholder="abc@gmail.com"
+                                    oninput="emailChecker()">
+                                <p class="error" id="emailError"></p>
+                            </div>
+                            <div class="form-control">
+                                <label for="name">Enter Password : </label>
+                                <input type="password" name="password" id="password" placeholder="Aa1@"
+                                    oninput="passwordChecker()">
+                                <p class="error" id="passwordError"></p>
+                            </div>
+                            <p class="notification"> You are New ? Click here to <a href="../Register/registerUser.html"
+                                    class="register">Register</a> </p>
+                            <div class="submitbtn d-flex justify-center">
+                                <button class="btn btn-submit" type="submit">Login</button>
+                            </div>
+                            <p class="error text-center" id="loginError"></p>
+                           
+                            <p class="text-center forgot"><a href="../Forgot/forgot.html"
+                                    class="forgot">Forgot Password ?</a> </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+<script src="./LoginUser.js"></script>
+
+</html>
+

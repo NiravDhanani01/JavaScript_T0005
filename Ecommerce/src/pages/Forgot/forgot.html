@@ -1,0 +1,75 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="icon" href="../../public/img/leaves.png">
+    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="./forgot.css">
+</head>
+
+<body>
+    <section class="loginuser">
+        <div class="container">
+            <div class="row">
+                <div class="box1"></div>
+                <div class="box">
+                    <h1 class="login-head">Forgot Password</h1>
+                    <p class="login-title">Don't Worry Enter details below</p>
+                    <div class="login-form">
+                        <form action="" onsubmit="LoginUser(event)" class="emilvalidator">
+                            <div class="form-control">
+                                <label for="name">Enter Email Address : </label>
+                                <input type="email" name="email" id="email" placeholder="abc@gmail.com"
+                                    oninput="emailChecker()">
+                                <p class="error" id="emailError"></p>
+                            </div>
+                            <div class="submitbtn d-flex justify-center">
+                                <button class="btn btn-submit" type="submit">Sumit</button>
+                            </div>
+                            <p class="error text-center" id="loginError"></p>
+                        </form>
+                        
+                        <form action="" onsubmit="otpchecker(event)" class="OtpValidator">
+                            <div class="form-control">
+                                <label for="name">Enter Otp: </label>
+                                <input type="number" name="otp" id="otp" placeholder="Enter Otp Here">
+                            </div>
+                            <div class="submitbtn d-flex justify-center">
+                                <button class="btn btn-submit" type="submit">Sumit</button>
+                            </div>
+                            <p class="error text-center" id="otpGerator"></p>
+                        </form>
+
+                        <form action="" onsubmit="PasswordSetter(event)" class="NewPassword">
+                            <div class="form-control">
+
+                                <div class="form-control">
+                                    <label for="name">Enter Email : </label>
+                                    <input type="email" name="email" id="email" placeholder="Enter Your Email"
+                                        oninput="emailChecker()">
+                                    <p class="error" id="emailError"></p>
+                                </div>
+                                <div class="form-control">
+                                    <label for="name">Enter Password : </label>
+                                    <input type="password" name="password" id="password" placeholder="Aa1@"
+                                        oninput="passwordChecker()">
+                                    <p class="error" id="passwordError"></p>
+                                </div>
+                            </div>
+                            <div class="submitbtn d-flex justify-center">
+                                <button class="btn btn-submit" type="submit">Sumit</button>
+                            </div>
+                        </form>
+                        <p class="text-center forgot"><a href="../login/login.html" class="forgot">Go To Login
+                                Page</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+<script src="./forgot.js"></script>
+
+</html>

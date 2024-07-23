@@ -1,0 +1,173 @@
+[
+    {
+        "id": 1,
+        "name": "Fantasy Crunchy Choco Chip Cookies",
+        "offerPrice": "99",
+        "price": "130",
+        "weight" : "1 kg",
+        "category" : "Snacks",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/cake/product/6.png"
+    },
+    {
+        "id": 2,
+        "name": "Cold Brew Coffee Instant Coffee",
+        "offerPrice": "79",
+        "price": "100",
+        "weight" : "50 g",
+        "category" : "Beverage",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/2.png"
+    },
+    {
+        "id": 3,
+        "name": "Peanut Butter Bite Premium Butter Cookies",
+        "offerPrice": "149",
+        "price": "180",
+        "weight" : "600 g",
+        "category" : "Snacks",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/cake/product/3.png"
+    },
+    {
+        "id": 4,
+        "name": "Jowar Stick and Jowar Chips",
+        "offerPrice": "29",
+        "price": "40",
+        "weight" : "40 g",
+        "category" : "Snacks",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/cake/product/4.png"
+    },
+    {
+        "id": 5,
+        "name": "Neu Farm Unpolished Desi Toor Dal",
+        "offerPrice": "149",
+        "price": "180",
+        "weight" : "1 kg",
+        "category" : "Beans",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/6.png"
+    },
+    {
+        "id": 6,
+        "name": "Yumitos Chilli Sprinkled Potato Chips",
+        "offerPrice": "79",
+        "price": "80",
+        "weight" : "100 g",
+        "category" : "Snacks",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/5.png"
+    },
+    {
+        "id": 7,
+        "name": "Mung Toor Dal",
+        "offerPrice": "149",
+        "price": "180",
+        "weight" : "1 kg",
+        "category" : "Beans",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/21.png"
+    },
+    {
+        "id": 8,
+        "name": "healthy Long Life Toned Milk",
+        "offerPrice": "79",
+        "price": "100",
+        "weight" : "1 L",
+        "category" : "Dairy_Product",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/7.png"
+    },
+    {
+        "id": 9,
+        "name": "Blended Instant Coffee 50 g Buy 1 Get 1 Free",
+        "offerPrice": "199",
+        "price": "250",
+        "weight" : "50 g",
+        "category" : "Beverage",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/10.png"
+    },
+    {
+        "id": 10,
+        "name": "Tuffets Whole Wheat Bread",
+        "offerPrice": "49",
+        "price": "60",
+        "weight" : "500 g",
+        "category" : "Bakery",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/11.png"
+    },
+    {
+        "id": 11,
+        "name": "Potato",
+        "offerPrice": "19",
+        "price": "25",
+        "weight" : "1 kg",
+        "category" : "Vegetables",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/12.png"
+    },
+    {
+        "id": 12,
+        "name": "Good Life Refined Sunflower Oil",
+        "offerPrice": "99",
+        "price": "150",
+        "weight" : "1 L",
+        "category" : "Vegetables",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/19.png"
+    },
+    {
+        "id": 13,
+        "name": "Organic Tomato",
+        "offerPrice": "49",
+        "price": "70",
+        "weight" : "1 kg",
+        "category" : "Vegetables",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/17.png"
+    },
+    {
+        "id": 14,
+        "name": "Frooti Mango Drink",
+        "offerPrice": "120",
+        "price": "150",
+        "weight" : "160 ml",
+        "category" : "Beverage",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/22.png"
+    },
+    {
+        "id": 15,
+        "name": "Green Chilly",
+        "offerPrice": "20",
+        "price": "25",
+        "weight" : "250 gm",
+        "category" : "Vegetables",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/13.png"
+    },
+    {
+        "id": 16,
+        "name": "Tuffets Britannia Cheezza",
+        "offerPrice": "449",
+        "price": "500",
+        "weight" : "500 g",
+        "category" : "Dairy_Product",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/15.png"
+    },
+    {
+        "id": 17,
+        "name": "Chocolate Chip Cookies ",
+        "offerPrice": "49",
+        "price": "80",
+        "weight" : "250 g",
+        "category" : "Bakery",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/cake/product/11.png"
+    },
+    {
+        "id": 18,
+        "name": "Long Life Toned Milk",
+        "offerPrice": "99",
+        "price": "150",
+        "weight" : "1 L",
+        "category" : "Dairy_Product",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/vegetable/product/16.png"
+    },
+    {
+        "id": 19,
+        "name": "Fresh Bread and Pastry Flour ",
+        "offerPrice": "36",
+        "price": "40",
+        "weight" : "200 g",
+        "category" : "Bakery",
+        "img": "https://themes.pixelstrap.com/fastkart/assets/images/cake/product/2.png"
+    }
+]

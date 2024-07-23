@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="./src/public/img/leaves.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/public/css/style.css">
+    <link rel="stylesheet" href="./src/public/css/all.min.css">
+
+</head>
+
+<body>
+    <section class="banner">
+        <header class="wow animate__fadeIn" data-wow-duration="2s">
+            <div class="container">
+                <nav class="navBar d-flex justify-between">
+                    <div class="logoImg">
+                        <img src="./src/public/img/logo.png" alt="Logo">
+                    </div>
+                    <div class="navBarItems largeNav">
+                        <ul type="none" class="d-flex justify-between">
+                            <li><a href="../../../index.html">Home</a></li>
+                            <li><a href="./src/pages/Product/product.html">Product</a></li>
+                            <li onclick="GotoCart()" class="cartnotification">Cart <i
+                                    class="fa-solid fa-cart-shopping"></i>
+                                <div class="bedgis" id="updateQty"></div>
+                            </li>
+                            <li><a href="./src/pages/Contact/contact.html">Contact</a> </li>
+                            <li class="dropDown"><i class="fa-regular fa-user"></i><span id="userName"> User Name</span>
+                                <div class="dropDown-Items">
+                                    <ul type="none">
+                                        <li id="loginUser"><a href="./src/pages/login/login.html"><i
+                                                    class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                                        <li onclick="GotoUserProfile()" id="ResetPassword"><i
+                                                class="fa-solid fa-gear"></i> User Profile</li>
+                                        <li onclick="LogoutUser()" id="logout"><i
+                                                class="fa-solid fa-right-from-bracket"></i> Logout</li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="small-navBar">
+                        <button class="small-menu-toggle" onclick="toggleNavBar()">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                </nav>
+
+                <div class="small-navBarItems" id="smallMenu">
+                    <ul type="none" class="d-flex flex-column">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="./src/pages/Product/product.html">Product</a></li>
+                        <li onclick="GotoCart()" class="cartnotification">Cart <i class="fa-solid fa-cart-shopping"></i>
+                            <div class="bedgis" id="smallupdateQty"></div>
+                        </li>
+                        <li><a href="./src/pages/Contact/contact.html">Contact</a> </li>
+                        <li class="dropDown"><i class="fa-regular fa-user"></i><span id="smalluserName"> User
+                                Name</span>
+                            <div class="dropDown-Items">
+                                <ul type="none">
+                                    <li id="smallloginUser"><a href="./src/pages/login/"><i
+                                                class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                                    <li onclick="GotoUserProfile()" id="ResetPassword"><i class="fa-solid fa-gear"></i>
+                                        User Profile</li>
+                                    <li onclick="LogoutUser()" id="smalllogout"><i
+                                            class="fa-solid fa-right-from-bracket"></i> Logout</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="container d-flex justify-center wow animate__backInDown" data-wow-duration="1s" >
+            <div class="banner-Image">
+                <div class="banner-Content">
+                    <p class="banner-offer">Exclusive offer <span class="banner-discount">30% Off</span></p>
+                    <h1 class="banne-Heading"> STAY HOME & DELIVERED YOUR DAILY NEEDS</h1>
+                    <p class="banner-content">Vegetables contain many vitamins and minerals that are good for your
+                        health.</p>
+                    <button class="banner-btn">Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="categorySection ">
+        <div class="container">
+            <div class="category-header">
+                <p class="cat-title"><span class="cat-icon"><img src="./src/public/img/cat-icon.png"
+                            width="25px"></span> Categories</p>
+                <h2 class="cat-head">Browse by Category</h2>
+            </div>
+            <div class="category-icons d-flex  justify-center">
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <h3 class="cat-card-title">Beverage</h3>
+                </div>
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s" >
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <h3 class="cat-card-title">Snacks</h3>
+                </div>
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s">
+                    <i class="fa-solid fa-cow"></i>
+                    <h3 class="cat-card-title text-center">Dairy</h3>
+                </div>
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s">
+                    <i class="fa-solid fa-carrot"></i>
+                    <h3 class="cat-card-title">Vegetables</h3>
+                </div>
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    <h3 class="cat-card-title">Bakery</h3>
+                </div>
+                <div class="cat-card wow animate__bounceIn" data-wow-duration="1s">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3 class="cat-card-title">Beans</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="product-Section ">
+        <div class="container">
+            <div class="our-products">
+                <div class="product-header">
+                    <p class="product-title"><span class="product-icon"> <img src="./src/public/img/grocery.png"
+                                width="25px" alt=""></span> Products</p>
+                    <h2 class="product-header">Our Best Products</h2>
+                </div>
+                <div class="product-list d-flex flex-wrap justify-center wow animate__backInUp" data-wow-duration="2s" id="productCard">
+                </div>
+                <div class="d-flex justify-center">
+                    <button class="showBtn" onclick="GotoProduct()">show All product</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-heding">
+                <div class="test-title d-flex">
+                    <span class="quot"><i class="fa-solid fa-quote-left"> </i></span>
+                    <p class="test-title01"> Testimonials </p>
+                </div>
+                <h3 class="testi-head">Users Feedback</h3>
+            </div>
+            <div class="user-feedback d-flex flex-wrap justify-center">
+                <div class="review wow animate__bounceIn" data-wow-duration="1s">
+                    <div class="useCard">
+                        <q>It is the best company has the customer relations about any details of package. In any case,
+                            they are really willing to solve the problem. There are lots of food variety compare to
+                            other websites, which is great. We had a quick delivery and good package as well.</q>
+                        <img src="./src/public/img/arrow.png" width="25px" alt="">
+                    </div>
+                    <div class="user d-flex">
+                        <img src="./src/public/img/women.jpg" alt="">
+                        <div class="reviewerName">
+                            <p class="userName">Tina Mcdonnale</p>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /////// -->
+                <div class="review">
+                    <div class="useCard">
+                        <q>I have ordered from Best Grocery on ten occasions now and I am always impressed by the care
+                            with which each item is packed, neatly arranged in the box and always a joy and a treat to
+                            open. Everything has always been fresh</q>
+                        <img src="./src/public/img/arrow.png" width="25px" alt="">
+                    </div>
+                    <div class="user d-flex">
+                        <img src="./src/public/img/man4.jpg" alt="">
+                        <div class="reviewerName">
+                            <p class="userName">James C. Anderson</p>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- /////// -->
+                <div class="review wow animate__bounceIn" data-wow-duration="1s">
+                    <div class="useCard">
+                        <q>It's not called Best grocery for nothing. I've been shopping from them for a few years now
+                            and there is always good availability, fast delivery and most often the cheapest prices
+                            compared to other online sites selling Turkish products</q>
+                        <img src="./src/public/img/arrow.png" width="25px" alt="">
+                    </div>
+                    <div class="user d-flex">
+                        <img src="./src/public/img/women1.jpg" alt="">
+                        <div class="reviewerName">
+                            <p class="userName">Ronda bern</p>
+                            <span>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fotter-section">
+        <div class="container">
+            <footer>
+                <div class="footer-details d-flex flex-wrap justify-between">
+                    <div class="footer-one">
+                        <div class="footlogo">
+                            <img src="./src/public/img/logo.png" width="200px" alt="">
+                            <p class="endText">
+                                We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a
+                                perfect place for a couple.
+                            </p>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-house"></i></span>
+                                <p class="companyAddress"> 685 Market Street,
+                                    Las Vegas, LA 95820,
+                                    United States.</p>
+                            </div>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-phone"></i></span>
+                                <p class="companyAddress"> (+01) 850-315-5862</p>
+                            </div>
+                            <div class="d-flex">
+                                <span class="homeicon"><i class="fa-solid fa-envelope"></i></span>
+                                <p class="companyAddress"> example@domain.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-two d-flex justify-center">
+                        <div>
+                            <h3>Pages</h3>
+                            <ul type="none">
+                                <li class="page-link"><a href="#">Home</a></li>
+                                <li class="page-link"><a href="./src/pages/Product/product.html">Product</a></li>
+                                <li class="page-link" onclick="GotoCart()">Cart</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-three">
+                        <h3>Download App</h3>
+                        <p>Save Upto 10% With App & New User only</p>
+                        <div class="d-flex justify-center Qr">
+                            <img src="./src/public/img/qr.png" alt="">
+                            <div class="playStore">
+                                <div><img src="./src/public/img/appstore.svg" alt=""></div>
+                                <div><img src="./src/public/img/playstore.svg" alt=""></div>
+                            </div>
+                        </div>
+                        <h4 class="connected">Stay connected </h4>
+                        <div class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="endnotes">
+                    <h4 class="text-center">copyRights &#169;</h4>
+                </div>
+            </footer>
+        </div>
+    </section>
+</body>
+<script src="./src/public/js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>
